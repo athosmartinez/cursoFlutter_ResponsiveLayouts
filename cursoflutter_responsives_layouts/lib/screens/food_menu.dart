@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:panucci_ristorante/cardapio.dart';
 import 'package:panucci_ristorante/components/food_item.dart';
-import 'package:panucci_ristorante/components/highlight_item.dart';
 
 class FoodMenu extends StatelessWidget {
   FoodMenu({super.key});
