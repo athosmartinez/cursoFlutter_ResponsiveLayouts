@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:panucci_ristorante/components/counter_component.dart';
 
 class OrderItem extends StatefulWidget {
@@ -27,17 +28,20 @@ class _OrderItemState extends State<OrderItem> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Image(
+            width: 120,
             image: AssetImage(widget.imageURI),
             fit: BoxFit.cover,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(widget.itemTitle),
-                Text(widget.itemPrice),
-              ],
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(widget.itemTitle),
+                  Text(widget.itemPrice),
+                ],
+              ),
             ),
           ),
           const Padding(
